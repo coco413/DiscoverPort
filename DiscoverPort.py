@@ -214,7 +214,7 @@ class Scanner(object):
                 for ip in fr.readlines():
                     targets.append(ip.strip())
         except Exception as e:
-            print e
+            print self.R + u'\n[x] file does not exist...' + self.W
         return targets
 
     def scanByMasscan(self, target):
@@ -412,7 +412,7 @@ class Scanner(object):
         except Exception as e:
             print e
         except KeyboardInterrupt:
-            print self.R + u'\n[x]  User Ctrl+C aborts scan ...' + self.W
+            print self.R + u'\n[x]  user Ctrl+C aborts scan ...' + self.W
             sys.exit(1)
 
 
